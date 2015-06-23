@@ -2,9 +2,6 @@ FROM kuzzleio/base
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN npm install -g \
-    grunt-cli \
-    jslint \
-    grunt-jslint \
     node-inspector@0.9.2
 
 ADD /scripts /
