@@ -1,5 +1,5 @@
 FROM debian:wheezy
-MAINTAINER Kaliop Labs
+MAINTAINER Kuzzle <support@kuzzle.io>
 
 ENV TERM=xterm-256color SHELL=/bin/zsh
 

@@ -1,5 +1,5 @@
-FROM kuzzle:base
-MAINTAINER Kaliop Labs
+FROM kuzzleio/base
+MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN npm install -g \
     grunt-cli \

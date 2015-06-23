@@ -1,5 +1,5 @@
-FROM rabbitmq
-MAINTAINER Kaliop Labs
+FROM kuzzleio/rabbitmq
+MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN rabbitmq-plugins enable rabbitmq_stomp
 RUN rabbitmq-plugins enable rabbitmq_mqtt
