@@ -1,4 +1,4 @@
-FROM kuzzleio/rabbitmq
+FROM rabbitmq
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN rabbitmq-plugins enable rabbitmq_stomp
