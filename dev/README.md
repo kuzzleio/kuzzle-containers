@@ -1,4 +1,4 @@
-# Rabbitmq
+# Kuzzle
 
 This repository contains Dockerfile for running [Kuzzle](https://github.com/kuzzleio/kuzzle).
 
