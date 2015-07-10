@@ -4,4 +4,5 @@ npm install
 
 # TODO: find a better way to wait for RabbitMQ
 sleep 3
-kuzzle perf
+pm2 start app-perf.js ${PM2_OPTIONS}
+pm2 logs
