@@ -1,4 +1,4 @@
-FROM busybox
+FROM debian:jessie
 MAINTAINER Kaliop
 
 ADD https://github.com/hashicorp/consul-template/releases/download/v0.10.0/consul-template_0.10.0_linux_amd64.tar.gz /root/
