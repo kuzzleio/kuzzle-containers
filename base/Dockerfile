@@ -16,11 +16,12 @@ RUN apt-get update && apt-get install -y \
     zsh && \
     apt-get clean
 
-ADD http://nodejs.org/dist/v0.12.1/node-v0.12.1-linux-x64.tar.gz /root/
-RUN tar xvf /root/node-v0.12.1-linux-x64.tar.gz -C /opt/ && \
-    rm /root/node-v0.12.1-linux-x64.tar.gz && \
-    ln -s /opt/node-v0.12.1-linux-x64/bin/* /usr/local/bin/
-RUN npm install -g pm2
+ADD http://nodejs.org/dist/v0.12.0/node-v0.12.0-linux-x64.tar.gz /root/
+RUN tar xvf /root/node-v0.12.0-linux-x64.tar.gz -C /opt/ && \
+    rm /root/node-v0.12.0-linux-x64.tar.gz && \
+    ln -s /opt/node-v0.12.0-linux-x64/bin/* /usr/local/bin/
+RUN npm install -g pm2 && \
+    npm install -g nodegrind@0.4.0
 
 RUN chsh -s /bin/zsh && \
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh && \
