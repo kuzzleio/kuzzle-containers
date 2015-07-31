@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y \
     git \
     netcat \
     vim \
+    python \
+    build-essential \
+    g++ \
     zsh && \
     apt-get clean
 
