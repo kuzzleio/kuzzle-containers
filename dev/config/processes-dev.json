@@ -1,6 +1,19 @@
 {
-  "name": "Kuzzle",
-  "script": "app-start.js",
-  "watch": ["lib", "config", "bin"],
-  "ignore_watch" : ["node_modules"]
+  apps: [{                                                                                                                                                                                                                                                                                 
+      "name"         : "KuzzleServer",
+      "script"       : "app-start.js",
+      "args"         : ["--server"],
+      "watch"        : ["lib", "config", "bin"],
+      "ignore_watch" : ["node_modules"]
+    },
+    {                                                                                                                                                                                                                                                                                 
+      "name"         : "KuzzleWorker",
+      "script"       : "app-start.js",
+      "instances"    : 1,
+      "exec_mode"    : "cluster",
+      "args"         : ["--worker"],
+      "watch"        : ["lib", "config", "bin"],
+      "ignore_watch" : ["node_modules"]
+    }
+  ]
 }
