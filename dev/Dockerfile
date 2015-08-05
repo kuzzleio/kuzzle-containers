@@ -8,6 +8,6 @@ ADD /scripts /
 ADD /config/ /config/
 RUN chmod 755 /*.sh
 
-EXPOSE 8080
+EXPOSE 7512
 
 CMD ["/run.sh"]
