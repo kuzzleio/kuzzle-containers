@@ -1,6 +1,6 @@
 #!/bin/sh
 
-npm install
+npm install --dev
 
 # TODO: find a better way to wait for RabbitMQ
 sleep 3
