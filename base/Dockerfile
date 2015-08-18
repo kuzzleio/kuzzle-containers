@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     python \
     build-essential \
     g++ \
+    nmap \
     zsh && \
     apt-get clean
 
