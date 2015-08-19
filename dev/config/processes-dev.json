@@ -1,19 +1,19 @@
 {
-  apps: [{                                                                                                                                                                                                                                                                                 
+  "apps": [{
       "name"         : "KuzzleServer",
       "script"       : "app-start.js",
       "args"         : ["--server"],
       "watch"        : ["lib", "config", "bin"],
-      "ignore_watch" : ["node_modules"]
+      "ignore_watch" : ["node_modules"],
+      "node_args": "--debug=7000"
     },
-    {                                                                                                                                                                                                                                                                                 
+    {
       "name"         : "KuzzleWorker",
       "script"       : "app-start.js",
-      "instances"    : 1,
-      "exec_mode"    : "cluster",
       "args"         : ["--worker"],
       "watch"        : ["lib", "config", "bin"],
-      "ignore_watch" : ["node_modules"]
+      "ignore_watch" : ["node_modules"],
+      "node_args": "--debug=7001"
     }
   ]
 }
