@@ -17,10 +17,12 @@ RUN apt-get update && apt-get install -y \
     zsh && \
     apt-get clean
 
-ADD http://nodejs.org/dist/v0.12.0/node-v0.12.0-linux-x64.tar.gz /root/
-RUN tar xvf /root/node-v0.12.0-linux-x64.tar.gz -C /opt/ && \
-    rm /root/node-v0.12.0-linux-x64.tar.gz && \
-    ln -s /opt/node-v0.12.0-linux-x64/bin/* /usr/local/bin/
+ENV NODE_VERSION 0.12.7
+
+ADD https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz /root/
+RUN tar xvf /root/node-v$NODE_VERSION-linux-x64.tar.gz -C /opt/ && \
+    rm /root/node-v$NODE_VERSION-linux-x64.tar.gz && \
+    ln -s /opt/node-v$NODE_VERSION-linux-x64/bin/* /usr/local/bin/
 RUN npm install -g pm2
 
 RUN chsh -s /bin/zsh && \
