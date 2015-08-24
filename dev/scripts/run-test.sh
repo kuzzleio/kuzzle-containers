@@ -9,16 +9,14 @@ do
 done
 echo "$(date) - connected successfully to ElasticSearch"
 
-if  [ -n "$MQ_BROKER_ENABLED" ]; then
-  while ! nmap -p 1883 rabbit
-  do
-    echo "$(date) - still trying connecting to http://rabbit:1883"
-    sleep 1
-  done
-  echo "$(date) - connected successfully to RabbitMQ"
-fi
+while ! nmap -p 1883 rabbit
+do
+  echo "$(date) - still trying connecting to http://rabbit:1883"
+  sleep 1
+done
+echo "$(date) - connected successfully to RabbitMQ"
 
 echo "Starting Kuzzle..."
 
 pm2 start /config/processes-dev.json
-pm2 logs
+npm test
