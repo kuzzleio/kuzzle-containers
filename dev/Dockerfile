@@ -1,6 +1,9 @@
 FROM kuzzleio/base
 MAINTAINER Kuzzle <support@kuzzle.io>
 
+RUN apt-get update && apt-get install -y \
+    wget
+
 RUN npm install -g \
     node-inspector@0.9.2
 
