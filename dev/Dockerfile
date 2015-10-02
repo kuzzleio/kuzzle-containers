@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN npm install -g \
     grunt-cli@0.1.13 \
-    node-inspector@0.12.2
+    node-inspector@0.12.3
 
 ADD /scripts /
 ADD /config/ /config/
