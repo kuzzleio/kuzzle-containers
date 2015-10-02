@@ -17,12 +17,14 @@ RUN apt-get update && apt-get install -y \
     zsh && \
     apt-get clean
 
-ENV NODE_VERSION 0.12.7
+ENV NODE_VERSION 4.1.1
 
 ADD https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz /root/
 RUN tar xvf /root/node-v$NODE_VERSION-linux-x64.tar.gz -C /opt/ && \
-    rm /root/node-v$NODE_VERSION-linux-x64.tar.gz && \
-    ln -s /opt/node-v$NODE_VERSION-linux-x64/bin/* /usr/local/bin/
+    rm /root/node-v$NODE_VERSION-linux-x64.tar.gz 
+
+ENV PATH /opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
+
 RUN npm install -g pm2
 
 RUN chsh -s /bin/zsh && \
