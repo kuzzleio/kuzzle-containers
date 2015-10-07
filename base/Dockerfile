@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     zsh && \
     apt-get clean
 
-ENV NODE_VERSION 4.1.1
+ENV NODE_VERSION 4.1.2
 
 ADD https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz /root/
 RUN tar xvf /root/node-v$NODE_VERSION-linux-x64.tar.gz -C /opt/ && \
