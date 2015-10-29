@@ -2,7 +2,7 @@
   "apps": [{
     "name": "KuzzleBo",
     "script": "bin/www",
-    "watch": "../",
+    "watch": "../core",
     "ignore_watch": ["../public"],
     "node_args": "--debug=7002"
   }]
