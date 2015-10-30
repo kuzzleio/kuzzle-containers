@@ -23,4 +23,4 @@ echo "Starting Kuzzle..."
 grunt
 pm2 start /config/processes-dev.json
 npm test
-npm run coveralls
+npm run codecov

@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-npm install
-
 while ! curl -silent -output /dev/null http://elasticsearch:9200 > /dev/null
 do
   echo "$(date) - still trying connecting to http://elasticsearch:9200"
