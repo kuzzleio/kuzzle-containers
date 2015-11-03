@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN npm install -g \
     grunt-cli@0.1.13 \
-    node-inspector@0.12.3
+    node-inspector@0.12.3 \
+    bower@1.6.5
 
 RUN gem install sass --version 3.2.10
 
