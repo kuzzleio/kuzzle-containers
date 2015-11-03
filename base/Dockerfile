@@ -14,18 +14,17 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     g++ \
     nmap \
-    zsh && \
+    zsh \
+    wget && \
     apt-get clean
 
-ENV NODE_VERSION 4.1.2
+ENV NODE_VERSION=4.2.1
 
 ADD https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz /root/
 RUN tar xvf /root/node-v$NODE_VERSION-linux-x64.tar.gz -C /opt/ && \
-    rm /root/node-v$NODE_VERSION-linux-x64.tar.gz 
+    rm /root/node-v$NODE_VERSION-linux-x64.tar.gz
 
-ENV PATH /opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
-
-RUN npm install -g pm2
+ENV PATH=/opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
 
 RUN chsh -s /bin/zsh && \
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh && \
@@ -41,4 +40,3 @@ RUN mkdir -p /var/app
 
 WORKDIR /var/app
 CMD ["zsh"]
-
