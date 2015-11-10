@@ -10,9 +10,6 @@ ADD /scripts /
 ADD /config/ /config/
 RUN chmod 755 /*.sh
 
-# Pre-install Kuzzle dependencies
-ONBUILD RUN git clone https://github.com/kuzzleio/kuzzle.git . && npm install
-
 EXPOSE 7512
 
 CMD ["/run.sh"]

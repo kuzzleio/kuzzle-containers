@@ -1,8 +1,6 @@
 #!/bin/sh
-# This script must be call only by a container running in travis (because of coveralls)
+# This script must be call only by a container running in travis (because of codecov)
 set -e
-
-npm install
 
 while ! curl -silent -output /dev/null http://elasticsearch:9200 > /dev/null
 do

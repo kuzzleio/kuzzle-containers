@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-npm install
-
 grunt
 
 echo "Starting Kuzzle BO..."

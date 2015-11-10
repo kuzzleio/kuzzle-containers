@@ -2,8 +2,6 @@
 # This script must be call only by a container running in travis (because of coveralls)
 set -e
 
-npm install
-
 grunt
 
 echo "Starting Kuzzle BO..."
