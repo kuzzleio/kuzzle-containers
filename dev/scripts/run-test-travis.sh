@@ -2,6 +2,8 @@
 # This script must be call only by a container running in travis (because of codecov)
 set -e
 
+npm install
+
 while ! curl -silent -output /dev/null http://elasticsearch:9200 > /dev/null
 do
   echo "$(date) - still trying connecting to http://elasticsearch:9200"
