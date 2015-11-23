@@ -1,6 +1,6 @@
 #!/bin/sh
 
-elastic=${READ_HOST:-elasticsearch:9200}
+elastic=${READ_ENGINE_HOST:-elasticsearch:9200}
 rabbit=${MQ_BROKER_HOST:-rabbit}
 rabbitPort=${MQ_BROKER_PORT:-5672}
 
