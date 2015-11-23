@@ -1,16 +1,20 @@
 #!/bin/sh
 
-while ! curl -silent -output /dev/null http://elasticsearch:9200 > /dev/null
+elastic=${READ_HOST:-elasticsearch:9200}
+rabbit=${MQ_BROKER_HOST:-rabbit}
+rabbitPort=${MQ_BROKER_PORT:-5672}
+
+while ! curl -silent -output /dev/null http://$elastic > /dev/null
 do
-  echo "$(date) - still trying connecting to http://elasticsearch:9200"
+  echo "$(date) - still trying connecting to http://$elastic"
   sleep 1
 done
 echo "$(date) - connected successfully to ElasticSearch"
 
 if  [ -n "$MQ_BROKER_ENABLED" ]; then
-  while ! nmap -p 1883 rabbit
+  while ! nmap -p $rabbitPort $rabbit
   do
-    echo "$(date) - still trying connecting to http://rabbit:1883"
+    echo "$(date) - still trying connecting to http://$rabbit:$rabbitPort"
     sleep 1
   done
   echo "$(date) - connected successfully to RabbitMQ"
