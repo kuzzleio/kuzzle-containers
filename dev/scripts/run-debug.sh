@@ -5,8 +5,6 @@ elastic=${READ_ENGINE_HOST:-elasticsearch:9200}
 rabbit=${MQ_BROKER_HOST:-rabbit}
 rabbitPort=${MQ_BROKER_PORT:-5672}
 
-echo "ELASTIC $elastic"
-
 npm install
 
 while ! curl -silent -output /dev/null http://$elastic > /dev/null
