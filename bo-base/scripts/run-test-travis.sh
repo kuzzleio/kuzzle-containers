@@ -7,5 +7,7 @@ grunt
 echo "Starting Kuzzle BO..."
 pm2 start /config/processes.json
 
+grunt sass
+
 npm test
 npm run coveralls
