@@ -6,6 +6,6 @@ pm2 start /config/processes.json
 
 npm install
 grunt sass
-bower install
+bower install --allow-root --config.interactive=false
 
 npm test
