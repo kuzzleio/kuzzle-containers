@@ -29,6 +29,7 @@ do
   echo "$(date) - still trying connecting to Kuzzle Server"
   sleep 1
 done
+sleep 5
 echo "$(date) - connected successfully to Kuzzle Server"
 
 npm run functional-testing
