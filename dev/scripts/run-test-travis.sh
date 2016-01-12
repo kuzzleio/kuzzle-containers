@@ -18,20 +18,5 @@ do
 done
 echo "$(date) - connected successfully to RabbitMQ"
 
-echo "Starting Kuzzle..."
-
-grunt
-pm2 start /config/processes-dev.json
-npm run unit-testing --coverage
-
-while ! curl -silent -output /dev/null http://localhost:7511 > /dev/null
-do
-  echo "$(date) - still trying connecting to Kuzzle Server"
-  sleep 1
-done
-sleep 5
-echo "$(date) - connected successfully to Kuzzle Server"
-
-npm run functional-testing
-
+node bin/kuzzle.js install && pm2 start /config/processes-dev.json && npm test
 npm run codecov
