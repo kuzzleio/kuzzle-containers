@@ -19,6 +19,4 @@ echo "$(date) - connected successfully to RabbitMQ"
 
 echo "Starting Kuzzle..."
 
-grunt
-pm2 start /config/processes-dev.json
-npm test
+node bin/kuzzle.js install && pm2 start /config/processes-dev.json && npm test

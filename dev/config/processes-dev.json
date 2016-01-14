@@ -1,16 +1,16 @@
 {
   "apps": [{
       "name"         : "KuzzleServer",
-      "script"       : "app-start.js",
-      "args"         : ["--server"],
+      "script"       : "bin/kuzzle.js",
+      "args"         : ["start",  "--server"],
       "watch"        : ["lib", "config", "bin"],
       "ignore_watch" : ["node_modules", "config/defaultPlugins.json", "config/customPlugins.json"],
       "node_args": "--debug=7000"
     },
     {
       "name"         : "KuzzleWorker",
-      "script"       : "app-start.js",
-      "args"         : ["--worker"],
+      "script"       : "bin/kuzzle.js",
+      "args"         : ["start", "--worker"],
       "watch"        : ["lib", "config", "bin"],
       "ignore_watch" : ["node_modules", "config/defaultPlugins.json", "config/customPlugins.json"],
       "node_args": "--debug=7001"
