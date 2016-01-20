@@ -17,6 +17,4 @@ bower install --allow-root --config.interactive=false
 echo "Starting Kuzzle BO..."
 pm2 start /config/processes.json
 
-phantomjs --webdriver=4444 > /dev/null 2>&1&
-
-npm test
+tail -f /dev/null
