@@ -17,4 +17,4 @@ bower install --allow-root --config.interactive=false
 echo "Starting Kuzzle BO..."
 pm2 start /config/processes.json
 
-tail -f /dev/null
+npm test
