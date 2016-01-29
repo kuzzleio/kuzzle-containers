@@ -21,4 +21,4 @@ nohup phantomjs --webdriver 4444 > /dev/null 2>&1&
 
 npm test
 
-/send-screenshots.sh 2> /dev/null
+/send-screenshots.sh || true
