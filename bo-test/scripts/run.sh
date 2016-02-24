@@ -20,4 +20,4 @@ pm2 start /config/processes.json
 rm -f /phantomjs-logs.fifo
 mkfifo /phantomjs-logs.fifo
 
-phantomjs --webdriver 4444 > phantomjs-logs.fifo
+phantomjs --webdriver 4444 > /phantomjs-logs.fifo
