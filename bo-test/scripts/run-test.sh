@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
 
 kuzzle=${KUZZLE_HOST:-kuzzle:7511}
 
@@ -20,5 +19,8 @@ pm2 start /config/processes.json
 nohup phantomjs --webdriver 4444 > /dev/null 2>&1&
 
 npm test
+return_value=$?
 
 /send-screenshots.sh || true
+
+exit $return_value
