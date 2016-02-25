@@ -21,6 +21,10 @@ nohup phantomjs --webdriver 4444 > /dev/null 2>&1&
 npm test
 return_value=$?
 
-/send-screenshots.sh || true
+if [$return_value -gt 0]; then
+  curl -XGET http://elasticsearch:9200/kuzzle-bo-testindex/_search/?size=1000 -o /var/app/dump/kuzzle-bo-testindex.json
+  curl -XGET http://elasticsearch:9200/%25kuzzle/_search/?size=1000 -o /var/app/dump/kuzzle.json
+fi
+
 
 exit $return_value
