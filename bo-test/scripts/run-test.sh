@@ -22,6 +22,7 @@ npm test
 return_value=$?
 
 if [ $return_value -gt 0 ]; then
+  mkdir /var/app/dump
   curl -XGET http://elasticsearch:9200/kuzzle-bo-testindex/_search/?size=1000 -o /var/app/dump/kuzzle-bo-testindex.json
   curl -XGET http://elasticsearch:9200/%25kuzzle/_search/?size=1000 -o /var/app/dump/kuzzle.json
 fi
