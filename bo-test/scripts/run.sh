@@ -22,4 +22,4 @@ mkfifo /phantomjs-logs.fifo
 
 nohup phantomjs --webdriver 4444 2>&1 | tee /phantomjs-logs.fifo > /dev/null &
 
-tail -f /dev/null
+pm2 logs
