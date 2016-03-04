@@ -22,5 +22,5 @@ fi
 
 echo "Starting Kuzzle..."
 
-node bin/kuzzle.js install && pm2 start /config/processes-dev.json 
+node bin/kuzzle install && pm2 start /config/processes-dev.json 
 pm2 logs
