@@ -9,6 +9,9 @@ do
 done
 echo "$(date) - connected successfully to Kuzzle"
 
+echo "Building Kuzzle BO..."
+npm run build
+
 echo "Starting Kuzzle BO..."
 pm2 start /config/processes.json
 

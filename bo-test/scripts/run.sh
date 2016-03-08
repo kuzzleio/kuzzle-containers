@@ -14,6 +14,9 @@ npm install
 grunt sass
 bower install --allow-root --config.interactive=false
 
+echo "Building Kuzzle BO..."
+npm run build
+
 echo "Starting Kuzzle BO..."
 pm2 start /config/processes.json
 
