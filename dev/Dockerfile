@@ -2,6 +2,7 @@ FROM kuzzleio/base
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN apk add -U \
+        nmap \
         python && \
     npm install -g \
     pm2 \
