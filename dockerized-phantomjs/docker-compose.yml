@@ -1,0 +1,4 @@
+phantom:
+  build: .
+  volumes:
+    - ./build:/dockerized-phantomjs
