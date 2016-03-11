@@ -1,4 +1,4 @@
-FROM kuzzleio/bo-test
+FROM kuzzleio/bo-test:alpine
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 ADD profile /tmp/profile
