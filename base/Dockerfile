@@ -17,4 +17,8 @@ RUN set -ex && \
 
 WORKDIR /var/app
 
+ADD /scripts /
+ADD /config/ /config/
+RUN chmod 755 /*.sh
+
 CMD ["ash"]
