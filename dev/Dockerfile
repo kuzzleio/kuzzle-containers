@@ -1,4 +1,4 @@
-FROM kuzzleio/base:alpine
+FROM kuzzleio/test:alpine
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 ADD profile /tmp/profile
@@ -6,9 +6,6 @@ ADD profile /tmp/profile
 RUN set -ex && \
     apk add -U \
         bash \
-        build-base \
-        git \
-        python \
         vim \
         zsh && \
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
