@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
-echo "Now, we can build our containers"
-for image in base dev bo-base bo-test; do
-    echo docker build -t kuzzleio/$image $image
+set -e
+
+for image in base dev bo-base bo-test bo-dev elasticsearch rabbitmq; do
+    echo ""
+    echo ""
+    echo ""
+    echo "-------------------------------------------------------------------------------"
+    echo "    docker build -t kuzzleio/$image $image"
+    echo "-------------------------------------------------------------------------------"
     docker build -t kuzzleio/$image $image
 done
 docker build -t kuzzleio/kuzzle dev
+docker build -t kuzzleio/bo bo-base

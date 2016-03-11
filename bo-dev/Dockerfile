@@ -1,4 +1,4 @@
-FROM kuzzleio/base
+FROM kuzzleio/bo-test
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 ADD profile /tmp/profile
@@ -22,13 +22,13 @@ RUN set -ex && \
     cat /root/.bashrc >> /etc/profile && \
     npm install -g \
         node-inspector@0.12.3 && \
-    apk del \
+    apk del --purge \
         build-base \
         python
 
 
-ADD /scripts /
+ADD scripts /
 ADD /config/ /config/
 RUN chmod 755 /*.sh
 
-CMD ["/run-debug.sh"]
+CMD ["/run-dev.sh"]

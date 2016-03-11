@@ -5,10 +5,7 @@ RUN apk add -U \
         build-base \
         python && \
     npm install -g \
-        grunt-cli@0.1.13 \
-        node-inspector@0.12.3 \
-        bower@1.6.5 \
-        pm2 && \
+        bower@1.6.5 && \
     apk add -U \
         ruby \
         ruby-rdoc \
