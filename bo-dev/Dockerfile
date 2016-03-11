@@ -22,9 +22,7 @@ RUN set -ex && \
     cat /root/.bashrc >> /etc/profile && \
     npm install -g \
         node-inspector@0.12.3 && \
-    apk del --purge \
-        build-base \
-        python
+    echo "done"
 
 
 ADD scripts /
