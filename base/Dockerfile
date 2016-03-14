@@ -2,6 +2,7 @@ FROM alpine:3.3
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 ENV TERM=xterm-color
+ENV ENV=/etc/profile
 
 RUN set -ex && \
     apk add -U \
@@ -17,6 +18,8 @@ RUN set -ex && \
 
 WORKDIR /var/app
 
+ADD /profile/profile /etc/profile
+ADD /profile/bash /bin/
 ADD /scripts /
 ADD /config/ /config/
 RUN chmod 755 /*.sh

@@ -1,0 +1,7 @@
+export CHARSET=UTF-8
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PAGER=less
+export PS1='\e[1;32m@kuzzle:\w \$ \e[0;39m'
+umask 022
+
+alias ll='ls -lhF --color'
