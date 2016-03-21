@@ -1,0 +1,5 @@
+#!/usr/bin/env ash
+
+echo "NB: Bash is not installed."
+echo "Switching to ash"
+exec ash "$@"

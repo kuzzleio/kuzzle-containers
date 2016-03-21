@@ -1,4 +1,4 @@
-FROM kuzzleio/test:alpine
+FROM kuzzleio/bo-test:alpine
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 ADD profile /tmp/profile
@@ -6,6 +6,9 @@ ADD profile /tmp/profile
 RUN set -ex && \
     apk add -U \
         bash \
+        build-base \
+        git \
+        python \
         vim \
         zsh && \
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
@@ -22,4 +25,8 @@ RUN set -ex && \
     echo "done"
 
 
-CMD ["/run-debug.sh"]
+ADD scripts /
+ADD /config/ /config/
+RUN chmod 755 /*.sh
+
+CMD ["/run-dev.sh"]
