@@ -27,7 +27,7 @@ RUN set -ex && \
     apk del curl && \
     echo "done"
 
-COPY config /opt/elasticsearch/
+COPY config /opt/elasticsearch/config
 
 EXPOSE 9200 9300
 ENTRYPOINT ["/docker-entrypoint.sh"]
