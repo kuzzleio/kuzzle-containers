@@ -2,7 +2,7 @@ FROM kuzzleio/base
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN npm install -g \
-    pm2 \
+    pm2@1.1.1 \
     grunt-cli@0.1.13 \
     node-inspector@0.12.3
 
