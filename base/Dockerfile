@@ -1,16 +1,5 @@
-FROM alpine:3.3
+FROM mhart/alpine-node:4.4
 MAINTAINER Kuzzle <support@kuzzle.io>
-
-ENV TERM=xterm-color ENV=/etc/profile NODE_VERSION=4.4.3
-
-ADD https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz /root/
-
-RUN mkdir /opt && \
-    gunzip /root/node-v$NODE_VERSION-linux-x64.tar.gz && \
-    tar xvf /root/node-v$NODE_VERSION-linux-x64.tar -C /opt/ && \
-    rm /root/node-v$NODE_VERSION-linux-x64.tar
-
-ENV PATH=/opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
 
 RUN set -ex && \
     apk add -U \
