@@ -12,4 +12,6 @@ RUN chmod 755 /*.sh
 
 EXPOSE 7512
 
+ENV PATH=/var/app/bin:$PATH
+
 CMD ["/run.sh"]
