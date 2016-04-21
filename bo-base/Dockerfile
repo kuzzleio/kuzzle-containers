@@ -1,6 +1,8 @@
 FROM kuzzleio/base:alpine
 MAINTAINER Kuzzle <support@kuzzle.io>
 
+# We keep build-base and python in this image, to allow some node modules
+# to compile, especially libsass
 RUN apk add -U \
         build-base \
         python && \
@@ -10,10 +12,7 @@ RUN apk add -U \
         ruby \
         ruby-rdoc \
         ruby-irb && \
-    gem install sass --version 3.2.10 && \
-    apk del \
-        build-base \
-        python
+    gem install sass --version 3.2.10
 
 ADD /scripts /
 ADD /config/ /config/
