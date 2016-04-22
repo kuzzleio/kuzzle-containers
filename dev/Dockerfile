@@ -20,6 +20,7 @@ RUN set -ex && \
     npm install -g \
         node-inspector@0.12.3 && \
     echo "done"
-
+    
+ENV PATH=/var/app/bin:$PATH
 
 CMD ["/run-debug.sh"]

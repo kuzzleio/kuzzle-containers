@@ -1,13 +1,9 @@
-FROM alpine:3.3
+FROM mhart/alpine-node:4.4
 MAINTAINER Kuzzle <support@kuzzle.io>
-
-ENV TERM=xterm-color
-ENV ENV=/etc/profile
 
 RUN set -ex && \
     apk add -U \
         nmap \
-        nodejs \
         python && \
     npm install -g \
         pm2 \
