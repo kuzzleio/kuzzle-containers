@@ -7,7 +7,6 @@ RUN set -ex && \
     apk add -U \
         bash \
         build-base \
-        git \
         python \
         vim \
         zsh && \

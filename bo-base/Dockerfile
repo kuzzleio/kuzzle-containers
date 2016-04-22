@@ -3,6 +3,7 @@ MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN apk add -U \
         build-base \
+        git \
         python && \
     npm install -g \
         bower@1.6.5 && \
