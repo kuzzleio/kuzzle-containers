@@ -9,6 +9,8 @@
     },
     {
       "name"         : "KuzzleWorker",
+      "exec_mode"    : "cluster",
+      "instances"    : 1,
       "script"       : "bin/kuzzle",
       "args"         : ["start", "--worker"],
       "watch"        : ["lib", "config", "bin"],
