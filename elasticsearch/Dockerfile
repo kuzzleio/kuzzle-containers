@@ -8,7 +8,7 @@ RUN set -ex && \
         curl \
         openjdk8 && \
     mkdir -p /opt && \
-    curl -Ls https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.2.0/elasticsearch-2.2.0.tar.gz \
+    curl -Ls https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.0/elasticsearch-2.3.0.tar.gz \
     | tar xz -C /opt/ && \
     mv /opt/elasticsearch* /opt/elasticsearch && \
     ln -s /opt/elasticsearch/bin/elasticsearch /usr/local/bin/ && \
