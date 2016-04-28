@@ -11,4 +11,6 @@ RUN set -ex && \
     
     echo "done"
 
+ENV TERM=xterm-color
+
 CMD ["/run-test.sh"]
