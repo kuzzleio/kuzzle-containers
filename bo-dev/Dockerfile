@@ -10,8 +10,7 @@ RUN set -ex && \
         python \
         vim \
         zsh && \
-    git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
-    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc && \
+    zsh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" || true && \
     sed -ri 's|ZSH_THEME="[^"]+"|ZSH_THEME="terminalparty"|' ~/.zshrc && \
     echo "export EDITOR=vim" >> ~/.zshrc && \
     echo 'bindkey "\033[1~" beginning-of-line' >> ~/.zshrc && \
