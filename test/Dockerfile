@@ -4,5 +4,4 @@ MAINTAINER Kuzzle <support@kuzzle.io>
 RUN apk add -U \
         build-base \
         git \
-        python \
-        zeromq-dev
+        python 
