@@ -7,8 +7,7 @@ RUN set -ex && \
       git \
       python && \
     apk del --purge \
-      build-base \
-      python
+      build-base
 
 ADD /scripts /
 ADD /config/ /config/
