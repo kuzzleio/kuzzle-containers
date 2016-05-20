@@ -1,0 +1,7 @@
+{
+  "apps": [{
+    "name": "KuzzleLB",
+    "script": "bin/load-balancer.js",
+    "watch": ["lib", "bin"]
+  }]
+}

@@ -1,0 +1,8 @@
+{
+  "apps": [{
+    "name": "KuzzleLB",
+    "script": "bin/load-balancer.js",
+    "watch": ["lib", "bin"],
+    "node_args": "--debug=7003"
+  }]
+}
