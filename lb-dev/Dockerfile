@@ -21,6 +21,7 @@ RUN set -ex && \
     echo "done"
     
 ENV PATH=/var/app/bin:$PATH
+ADD /config/ /config/
 ENV TERM=xterm-color
 
 CMD ["/run-debug.sh"]
