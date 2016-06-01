@@ -9,6 +9,8 @@ RUN set -ex && \
     apk del --purge \
       build-base
 
+WORKDIR /var/app
+
 ADD /scripts /
 ADD /config/ /config/
 RUN chmod 755 /*.sh
