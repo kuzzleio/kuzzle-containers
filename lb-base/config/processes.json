@@ -2,6 +2,6 @@
   "apps": [{
     "name": "KuzzleLB",
     "script": "index.js",
-    "watch": ["lib", "bin"]
+    "watch": ["lib"]
   }]
 }

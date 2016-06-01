@@ -2,7 +2,7 @@
   "apps": [{
     "name": "KuzzleLB",
     "script": "index.js",
-    "watch": ["lib", "bin"],
+    "watch": ["lib"],
     "node_args": "--debug=7003"
   }]
 }

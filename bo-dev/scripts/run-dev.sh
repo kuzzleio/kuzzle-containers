@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-kuzzle=${KUZZLE_HOST:-kuzzle:7511}
+kuzzle=${KUZZLE_URL:-kuzzle:7511}
 
 while ! curl -silent -output /dev/null http://$kuzzle/api/v1.0 > /dev/null
 do
