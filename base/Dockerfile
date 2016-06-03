@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:4.4
+FROM mhart/alpine-node:4.4.3
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN set -ex && \
