@@ -3,7 +3,9 @@
 echo "Starting Kuzzle Load balancer..."
 npm install
 
-sleep 5
+npm run plugins
+
+sleep 1
 
 pm2 start /config/processes.json
 
