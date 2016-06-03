@@ -1,8 +1,11 @@
 #!/bin/sh
 
 echo "Starting Kuzzle Load balancer..."
+
+npm install
+
 pm2 start /config/processes.json
 
-node ./plugins.js && pm2 sendSignal -s USR1 KuzzleLB
+pm2 sendSignal -s USR1 KuzzleLB
 
 pm2 logs
