@@ -1,4 +1,4 @@
-FROM kuzzleio/lb-test:alpine
+FROM kuzzleio/proxy-test:alpine
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 ADD profile /tmp/profile
