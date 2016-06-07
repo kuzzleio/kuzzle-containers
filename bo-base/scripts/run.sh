@@ -2,7 +2,7 @@
 
 kuzzle=${KUZZLE_HOST:-kuzzle:7511}
 
-while ! curl -silent -output /dev/null http://$kuzzle/api/v1.0 > /dev/null
+while ! curl -silent -output /dev/null http://$kuzzle/api/1.0 > /dev/null
 do
   echo "$(date) - still trying connecting to http://$kuzzle"
   sleep 1
