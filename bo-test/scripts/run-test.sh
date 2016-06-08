@@ -19,8 +19,10 @@ npm run build
 echo "Starting Kuzzle BO..."
 pm2 start /config/processes.json
 
+echo "Starting PhantomJS..."
 nohup phantomjs --webdriver 4444 > /dev/null 2>&1&
 
+echo "Starting Tests..."
 npm test
 return_value=$?
 
