@@ -4,6 +4,7 @@ MAINTAINER Kuzzle <support@kuzzle.io>
 RUN set -ex && \
     apk add -U \
         nmap \
+        curl \
         python && \
     npm install -g \
         pm2 \
