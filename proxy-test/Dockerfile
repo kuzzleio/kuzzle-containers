@@ -1,4 +1,4 @@
-FROM kuzzleio/lb-base:alpine
+FROM kuzzleio/proxy-base:alpine
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 RUN apk add -U \
