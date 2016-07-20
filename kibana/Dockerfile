@@ -20,7 +20,10 @@ RUN set -ex \
     && ln -s $(which node) /opt/kibana-$KIBANA_VERSION-linux-x64/node/bin/node \
     && apk del curl
 
+RUN /opt/kibana plugin -i elastic/timelion
+
 EXPOSE 5601
 
-WORKDIR ["/opt/kibana-$KIBANA_VERSION-linux-x64"]
-CMD ["/opt/kibana"]
+ADD /scripts/run.sh /run.sh
+
+CMD ["ash", "/run.sh"]
