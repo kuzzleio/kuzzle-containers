@@ -2,8 +2,6 @@
 
 
 elastic=${READ_ENGINE_HOST:-elasticsearch:9200}
-rabbit=${MQ_BROKER_HOST:-rabbit}
-rabbitPort=${MQ_BROKER_PORT:-5672}
 
 npm install
 
@@ -13,13 +11,6 @@ do
   sleep 1
 done
 echo "$(date) - connected successfully to ElasticSearch"
-
-while ! nmap -p $rabbitPort $rabbit
-do
-  echo "$(date) - still trying connecting to http://$rabbit:$rabbitPort"
-  sleep 1
-done
-echo "$(date) - connected successfully to RabbitMQ"
 
 echo "Starting Kuzzle..."
 

@@ -2,7 +2,7 @@
 
 set -e
 
-for image in base dev bo-base bo-test bo-dev elasticsearch rabbitmq; do
+for image in base dev bo-base bo-test bo-dev elasticsearch; do
     echo ""
     echo ""
     echo ""
