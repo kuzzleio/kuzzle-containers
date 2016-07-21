@@ -15,6 +15,8 @@ RUN set -ex && \
 
 WORKDIR /var/app
 
+RUN npm set progress=false
+
 ADD /profile/profile /etc/profile
 ADD /profile/bash /bin/
 ADD /scripts /
