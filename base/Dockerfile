@@ -11,11 +11,10 @@ RUN set -ex && \
         grunt-cli@0.1.13 && \
     apk del --purge \
         python && \
-    mkdir -p /var/app
+    mkdir -p /var/app && \
+    npm set progress=false
 
 WORKDIR /var/app
-
-RUN npm set progress=false
 
 ADD /profile/profile /etc/profile
 ADD /profile/bash /bin/
