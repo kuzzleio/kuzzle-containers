@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.4
 MAINTAINER Kuzzle <support@kuzzle.io>
 
 COPY docker-entrypoint.sh /
@@ -8,7 +8,7 @@ RUN set -ex && \
         curl \
         openjdk8 && \
     mkdir -p /opt && \
-    curl -Ls https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.0/elasticsearch-2.3.0.tar.gz \
+    curl -Ls https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.4/elasticsearch-2.3.4.tar.gz \
     | tar xz -C /opt/ && \
     mv /opt/elasticsearch* /opt/elasticsearch && \
     ln -s /opt/elasticsearch/bin/elasticsearch /usr/local/bin/ && \
