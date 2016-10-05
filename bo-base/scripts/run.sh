@@ -17,7 +17,7 @@ echo "Building Kuzzle BO..."
 npm run build
 
 echo "Starting Kuzzle BO..."
-pm2 start /config/processes.json
+pm2 start /config/processes.json --silent
 
 nohup node-inspector --web-port=8080 --debug-port=7002 > /dev/null 2>&1&
 pm2 sendSignal -s USR1 KuzzleBo

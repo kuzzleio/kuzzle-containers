@@ -14,7 +14,7 @@ npm install
 bower install --allow-root --config.interactive=false
 
 echo "Starting Kuzzle BO in development mode..."
-NODE_ENV=dev pm2 start /config/processes.json
+NODE_ENV=dev pm2 start /config/processes.json --silent
 
 echo "Starting PhantomJS..."
 rm -f /phantomjs-logs.fifo

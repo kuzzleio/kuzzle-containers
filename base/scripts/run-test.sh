@@ -12,4 +12,4 @@ echo "$(date) - connected successfully to ElasticSearch"
 
 echo "Starting Kuzzle..."
 
-node bin/kuzzle install && pm2 start /config/processes-dev.json && npm test
+node bin/kuzzle install && pm2 start /config/processes-dev.json --silent && npm test

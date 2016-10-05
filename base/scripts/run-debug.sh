@@ -14,7 +14,7 @@ echo "$(date) - connected successfully to ElasticSearch"
 
 echo "Starting Kuzzle..."
 
-node bin/kuzzle install && pm2 start /config/processes-dev.json
+node bin/kuzzle install && pm2 start /config/processes-dev.json --silent
 
 nohup node-inspector --web-port=8080 --debug-port=7000 > /dev/null 2>&1&
 nohup node-inspector --web-port=8081 --debug-port=7001 > /dev/null 2>&1&

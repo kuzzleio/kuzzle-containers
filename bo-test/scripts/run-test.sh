@@ -17,7 +17,7 @@ echo "Building Kuzzle BO..."
 npm run build
 
 echo "Starting Kuzzle BO..."
-pm2 start /config/processes.json
+pm2 start /config/processes.json --silent
 
 echo "Starting PhantomJS..."
 nohup phantomjs --webdriver 4444 > /dev/null 2>&1&

@@ -11,5 +11,5 @@ do
 done
 echo "$(date) - connected successfully to ElasticSearch"
 
-node bin/kuzzle install && pm2 start /config/processes-dev.json && npm test
+node bin/kuzzle install && pm2 start /config/processes-dev.json --silent && npm test
 npm run codecov
