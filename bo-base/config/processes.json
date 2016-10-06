@@ -1,8 +1,0 @@
-{
-  "apps": [{
-    "name": "KuzzleBo",
-    "script": "bin/www",
-    "watch": ["app.js", "bin", "core"],
-    "node_args": "--debug=7002"
-  }]
-}

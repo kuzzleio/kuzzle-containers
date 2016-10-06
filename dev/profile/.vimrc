@@ -14,7 +14,7 @@ filetype plugin indent on
 
 syntax on
 set background=dark
-color hybrid
+color codeschool
 set laststatus=2
 set expandtab
 set ts=4

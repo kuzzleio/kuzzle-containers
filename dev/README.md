@@ -1,7 +1,3 @@
-# Kuzzle
+# Kuzzleio/dev image
 
-This repository contains Dockerfile for running [Kuzzle](https://github.com/kuzzleio/kuzzle).
-
-# Documentation
-
-Please, refer to main project [Kuzzle](https://github.com/kuzzleio/kuzzle) for more information.
+This image is used to run kuzzleio projects in development mode
