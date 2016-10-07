@@ -12,16 +12,18 @@ RUN apt-get update && apt-get install -y \
       rbenv \
       curl \
       git \
-      wget && \
-      zsh && \
-    gem install \
-      sass --version 3.2.10 && \
-    npm install -g \
+      wget \
+      zsh \
+    && gem install \
+      sass --version 3.2.10 \
+    && npm install -g \
       bower \
-      node-inspector && \
-    apt-get clean
+      node-inspector \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-ENV TERM=xterm-256color SHELL=/bin/zsh
+ENV TERM=xterm-256color \
+    SHELL=/bin/zsh
 
 RUN chsh -s /bin/zsh && \
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh && \
