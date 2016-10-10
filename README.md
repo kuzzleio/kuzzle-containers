@@ -25,8 +25,7 @@ Contains:
   * [npm] bower
   * [npm] node-inspector
  * tools to improve development experience:
-  * vim (+ profile)
-  * zsh (+ ohmyzsh)
   * bash-completion
+  * ll alias
   * curl
   * wget
