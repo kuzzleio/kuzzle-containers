@@ -2,7 +2,7 @@
 
 set -e
 
-for image in base dev test; do
+for image in base dev; do
     echo ""
     echo ""
     echo ""
