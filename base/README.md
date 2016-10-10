@@ -1,7 +1,5 @@
-# Kuzzle base
+# kuzzleio/base
 
-This repository contains Dockerfile for running [Kuzzle](https://github.com/kuzzleio/kuzzle).
+This repository contains Dockerfile for building [Kuzzle](https://github.com/kuzzleio/kuzzle) stack base image.
 
-# Documentation
-
-Please, refer to main project [Kuzzle](https://github.com/kuzzleio/kuzzle) for more information.
+Contains nodejs (4.5.0) binary and pm2 global module

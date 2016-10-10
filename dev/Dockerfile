@@ -1,12 +1,15 @@
 FROM kuzzleio/base
 MAINTAINER Kuzzle <support@kuzzle.io>
 
-ADD profile /tmp/profile
+COPY profile /tmp/profile
+
+WORKDIR /var/app
 
 RUN apt-get update && apt-get install -y \
       build-essential \
       g++ \
       python \
+      libfontconfig \
       bash-completion \
       vim \
       rbenv \
@@ -26,7 +29,7 @@ ENV TERM=xterm-256color \
     SHELL=/bin/zsh
 
 RUN chsh -s /bin/zsh && \
-    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh && \
+    curl -sL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh && \
     sed -ri 's|ZSH_THEME="[^"]+"|ZSH_THEME="terminalparty"|' ~/.zshrc && \
     echo "export EDITOR=vim" >> ~/.zshrc && \
     echo 'bindkey "\033[1~" beginning-of-line' >> ~/.zshrc && \

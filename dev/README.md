@@ -1,3 +1,20 @@
-# Kuzzleio/dev image
+# kuzzleio/dev
 
-This image is used to run kuzzleio projects in development mode
+This repository contains Dockerfile for building [Kuzzle](https://github.com/kuzzleio/kuzzle) stack development image.
+
+Contains:
+ * all needed to watch and build kuzzleio projects on the fly:
+  * build-essential
+  * g++
+  * python
+  * rbenv
+  * libfontconfig
+  * [gem] sass
+  * [npm] bower
+  * [npm] node-inspector
+ * tools to improve development experience:
+  * vim (+ profile)
+  * zsh (+ ohmyzsh)
+  * bash-completion
+  * curl
+  * wget
