@@ -6,14 +6,14 @@ COPY profile /tmp/profile
 WORKDIR /var/app
 
 RUN apt-get update && apt-get install -y \
-      build-essential \
-      g++ \
-      python \
-      libfontconfig \
       bash-completion \
-      rbenv \
+      build-essential \
       curl \
+      g++ \
       git \
+      libfontconfig \
+      python \
+      rbenv \
       wget \
     && gem install \
       sass --version 3.2.10 \
