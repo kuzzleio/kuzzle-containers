@@ -22,6 +22,6 @@ RUN apt-get update && apt-get install -y \
       node-inspector \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && alias ll="ls -lahF --color"
+    && echo "alias ll=\"ls -lahF --color\"" >> ~/.bashrc
 
 ENV TERM=xterm-256color
