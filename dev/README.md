@@ -1,7 +1,19 @@
-# Kuzzle
+# kuzzleio/dev
 
-This repository contains Dockerfile for running [Kuzzle](https://github.com/kuzzleio/kuzzle).
+This repository contains Dockerfile for building [Kuzzle](https://github.com/kuzzleio/kuzzle) stack development image.
 
-# Documentation
-
-Please, refer to main project [Kuzzle](https://github.com/kuzzleio/kuzzle) for more information.
+Contains:
+ * all needed to watch and build kuzzleio projects on the fly:
+  * build-essential
+  * g++
+  * python
+  * rbenv
+  * libfontconfig
+  * [gem] sass
+  * [npm] bower
+  * [npm] node-inspector
+ * tools to improve development experience:
+  * bash-completion
+  * ll alias
+  * curl
+  * wget

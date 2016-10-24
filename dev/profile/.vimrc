@@ -14,11 +14,11 @@ filetype plugin indent on
 
 syntax on
 set background=dark
-color hybrid
+color codeschool
 set laststatus=2
 set expandtab
-set ts=4
-set sw=4
+set ts=2
+set sw=2
 set showcmd
 set cursorline
 set wildmenu

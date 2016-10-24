@@ -1,7 +1,31 @@
 # kuzzle-containers
 
-This repository contains all containers for running [Kuzzle](https://github.com/kuzzleio/kuzzle).
+This repository contains mutualized containers for running [Kuzzle](https://github.com/kuzzleio/kuzzle) stack.
 
-# Documentation
+It contains :
+ * [kuzzleio/base](https://hub.docker.com/r/kuzzleio/base/) image: used to build kuzzleio projects in production mode
+ * [kuzzleio/dev](https://hub.docker.com/r/kuzzleio/dev/) image: used to run kuzzleio projects in development mode
 
-Please, refer to main project [Kuzzle](https://github.com/kuzzleio/kuzzle) for more information.
+## kuzzleio/base
+
+Contains nodejs (6.9.1) binary and pm2 global module
+
+## kuzzleio/dev
+
+Based on kuzzleio/base
+
+Contains:
+ * all needed to watch and build kuzzleio projects on the fly:
+  * build-essential
+  * g++
+  * python
+  * rbenv
+  * libfontconfig
+  * [gem] sass
+  * [npm] bower
+  * [npm] node-inspector
+ * tools to improve development experience:
+  * bash-completion
+  * ll alias
+  * curl
+  * wget

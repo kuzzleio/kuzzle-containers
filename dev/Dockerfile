@@ -1,17 +1,27 @@
 FROM kuzzleio/base
 MAINTAINER Kuzzle <support@kuzzle.io>
 
-RUN npm install -g \
-    pm2@1.1.1 \
-    grunt-cli@0.1.13 \
-    node-inspector@0.12.3
+COPY profile /tmp/profile
 
-ADD /scripts /
-ADD /config/ /config/
-RUN chmod 755 /*.sh
+WORKDIR /var/app
 
-EXPOSE 7512
+RUN apt-get update && apt-get install -y \
+      bash-completion \
+      build-essential \
+      curl \
+      g++ \
+      git \
+      libfontconfig \
+      python \
+      rbenv \
+      wget \
+    && gem install \
+      sass --version 3.2.10 \
+    && npm install -g \
+      bower \
+      node-inspector \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && echo "alias ll=\"ls -lahF --color\"" >> ~/.bashrc
 
-ENV PATH=/var/app/bin:$PATH
-
-CMD ["/run.sh"]
+ENV TERM=xterm-256color
