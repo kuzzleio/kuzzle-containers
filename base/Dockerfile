@@ -11,5 +11,5 @@ RUN tar xf /tmp/node-v$NODE_VERSION-linux-x64.tar.gz -C /opt/ \
     && mkdir -p /var/app \
     && npm set progress=false \
     && npm install -g \
-      pm2 \
+      pm2@1.1.3 \
     && echo "" > /opt/node-v$NODE_VERSION-linux-x64/lib/node_modules/pm2/lib/keymetrics \
