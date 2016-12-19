@@ -20,7 +20,6 @@ RUN apt-get update && apt-get install -y \
       sass --version 3.2.10 \
     && npm install -g \
       bower \
-      node-inspector \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && echo "alias ll=\"ls -lahF --color\"" >> ~/.bashrc
