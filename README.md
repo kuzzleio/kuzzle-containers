@@ -8,7 +8,7 @@ It contains :
 
 ## kuzzleio/base
 
-Contains nodejs (6.9.1) binary and pm2 global module
+Contains nodejs (6.11.0) binary and pm2 global module
 
 ## kuzzleio/dev
 
