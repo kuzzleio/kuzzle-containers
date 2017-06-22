@@ -1,3 +1,3 @@
 FROM node:slim
 
-RUN npm i -g @testim/testim-cli
+RUN npm config set unsafe-perm=true && npm i -g @testim/testim-cli
