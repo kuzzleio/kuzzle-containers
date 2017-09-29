@@ -1,16 +1,26 @@
 FROM debian:jessie
-MAINTAINER Kaliop
+MAINTAINER Kuzzle <support@kuzzle.io>
 
-ADD https://github.com/hashicorp/consul-template/releases/download/v0.10.0/consul-template_0.10.0_linux_amd64.tar.gz /root/
-RUN cd /root && \
-    gzip -d consul-template_0.10.0_linux_amd64.tar.gz && \
-    tar xvf consul-template_0.10.0_linux_amd64.tar && \
-    mv consul-template_0.10.0_linux_amd64/consul-template /usr/bin/ && \
-    rm -rf /root/consul-template*
-ADD https://get.docker.com/builds/Linux/x86_64/docker-latest /root/
-RUN cd /root && \
-    mv docker-latest /usr/bin/docker && \
-    chmod a+x /usr/bin/docker
+RUN  apt-get update \
+  && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+  && cd /tmp \
+  && curl -SLO https://releases.hashicorp.com/consul-template/0.19.3/consul-template_0.19.3_linux_amd64.tgz \
+  && tar -xvf consul-template_0.19.3_linux_amd64.tgz \
+  && chmod a+x consul-template \
+  && mv consul-template /usr/local/bin/ \
+  && rm -rf consul-template* \
+  \
+  && curl -SLO https://download.docker.com/linux/static/stable/x86_64/docker-17.09.0-ce.tgz \
+  && tar -xvf docker-17.09.0-ce.tgz \
+  && mv docker/docker /usr/local/bin/ \
+  && rm -rf docker* \
+  \
+  && apt-get purge -y --auto-remove \
+    ca-certificates \
+    curl \
+  && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT [ "consul-template" ]
 CMD [ "--help" ]
