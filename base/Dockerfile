@@ -12,5 +12,5 @@ RUN  set -x \
   && tar xf /tmp/node-v$NODE_VERSION-linux-x64.tar.gz -C /opt/ \
   && rm /tmp/node-v$NODE_VERSION-linux-x64.tar.gz \
   && mkdir -p /var/app \
-  && npm install -g npm@5.6.0
+  && npm install -g npm@5.6.0 \
   && npm set progress=false
