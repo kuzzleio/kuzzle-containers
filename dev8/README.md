@@ -1,6 +1,6 @@
-# kuzzleio/dev
+# kuzzleio/dev8
 
-This repository contains Dockerfile for building [Kuzzle](https://github.com/kuzzleio/kuzzle) stack development image.
+This repository contains Dockerfile for building [Kuzzle](https://github.com/kuzzleio/kuzzle) stack development image with NodeJS 8.
 
 Contains:
  * all needed to watch and build kuzzleio projects on the fly:
