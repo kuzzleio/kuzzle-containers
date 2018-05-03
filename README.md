@@ -10,6 +10,7 @@ It contains :
 
 Contains nodejs (6.11.0) binary and pm2 global module
 
+
 ## kuzzleio/dev
 
 Based on kuzzleio/base
