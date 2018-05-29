@@ -1,6 +1,7 @@
 FROM debian:stretch-slim
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
+LABEL description="Enhance the Kuzzle core with ease"
 
 WORKDIR /var/app
 ENV TERM=xterm

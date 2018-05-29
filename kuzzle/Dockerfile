@@ -5,6 +5,7 @@
 FROM debian:stretch-slim as development
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
+LABEL description="Develop new plugin or protocol for Kuzzle with ease"
 
 ENV NODE_VERSION=8.9.0
 ENV PATH=/opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
@@ -54,8 +55,10 @@ RUN  npm install --unsafe \
 FROM debian:stretch-slim as production
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
+LABEL description="Run your Kuzzle backend in production mode"
 
 ENV NODE_VERSION=8.9.0
+ENV NODE_ENV=production
 ENV PATH=/opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
 
 COPY --from=development /var/app /var/app
