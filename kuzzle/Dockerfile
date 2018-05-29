@@ -33,7 +33,7 @@ RUN  set -x \
   && npm install -g npm \
   && npm set progress=false \
   && npm install -g \
-    pm2@2.5.0 \
+    pm2 \
   && echo "" > /opt/node-v$NODE_VERSION-linux-x64/lib/node_modules/pm2/lib/keymetrics \
   && rm -rf /var/lib/apt/lists/* \
   && echo "alias ll=\"ls -lahF --color\"" >> ~/.bashrc

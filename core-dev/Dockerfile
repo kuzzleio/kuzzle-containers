@@ -33,13 +33,11 @@ RUN set -x \
   \
   && n $NODE_8_VERSION \
   && npm install -g \
-    bower \
-    pm2@2.5.0 \
+    pm2 \
   \
   && n $NODE_6_VERSION \
   && npm install -g \
-    bower \
-    pm2@2.5.0 \
+    pm2 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && echo "alias ll=\"ls -lahF --color\"" >> ~/.bashrc \
