@@ -1,0 +1,17 @@
+group: edge
+
+services:
+  - docker
+
+on:
+  branch: master
+
+env:
+  global:
+  # DOCKER_PASSWORD
+  - secure: "IWWZ673TdyxLsvURJUMFt9fzDp7pKMRrZjCHkBqLrJE7fqECfN0WN+rkY2IaVsjGvc5VIa/05/9xYVEIX4rBhtLtZE2YTkXjU/eMjxs+lSHpVkyyLebYJVmCV+f6P4fjNIKNtr+ucMBklExKYaW9LI2noeYXKzyHmWfDmAy7KubFo8J5OHaODYqOQgNKdeX15JAJFH3K5CjhQxY5QBTvuXhZFDwcPeDo526mYiHJBXszpOCCjmEXN/YYT+gEO/jxakCUT4vLaZt9feSY1Sd6Wxm9eGLvYa6B/lwvMt0FWehZ+TSDGXagDyyK8oFqeZojbZyBTjhWj/12qaf3uPiHUU60eMbwaOfqwOZUxuVU+atx/ntxMQO22mr66DyGTcyVET9Yf5nFuVfyTiwPbBIDY4jLMRL/ZcOQDLrX2ObWRqSIvxHh24qzTFqvxR2FBqf+WHvYf4FVDUxmC3GxS5RRZ8n5osHic7tnEKij0lU9TlYfBYn7ESXyWB7iZsj5lw73s9ityXpJo3AfffCWBttAhI/FfDckwyF+vhh0+ULU8mYpgbCCZ3DKob35bZmS97LAE4QBKe22INfKH8Lxzq3qDp5tcbwDCjJUsEF9HP3oBy/F36OO1CZarrVJXDuWi1hf51KtWuEusOdcF4twZn3RVB+7M72prkx+YRh2P5UvQoM="
+
+script:
+  - docker login -u aschen -p $DOCKER_PASSWORD
+  - bash build-images.sh
+  - bash push-images.sh

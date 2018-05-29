@@ -1,4 +1,6 @@
-# Development image
+#####################
+# Development image #
+#####################
 
 FROM debian:stretch-slim as development
 
@@ -45,7 +47,9 @@ RUN  npm install --unsafe \
   && npm rebuild all --unsafe \
   && for plugin in plugins/enabled/*; do cd "$plugin"; npm install --unsafe; cd /var/app; done
 
-# Production image
+####################
+# Production image #
+####################
 
 FROM debian:stretch-slim as production
 
@@ -62,4 +66,5 @@ RUN  ln -s /var/app/docker-compose/scripts/run.sh /usr/local/bin/kuzzle \
   && chmod a+x /var/app/docker-compose/scripts/docker-entrypoint.sh
 
 ENTRYPOINT ["/var/app/docker-compose/scripts/docker-entrypoint.sh"]
+
 CMD ["kuzzle", "start"]
