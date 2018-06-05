@@ -14,7 +14,7 @@ This image is useful for core developer. Kuzzle source code is mounted inside th
 
 Contains:
  * all needed to watch and build kuzzleio projects on the fly:
- * NVM with node 6 and node 8
+ * [n](https://github.com/tj/n) with node 6 and node 8
   * build-essential
   * g++
   * python
@@ -36,7 +36,7 @@ The development image is useful for plugin or protocol developer.
 
  Contains:
   * all needed to watch and build kuzzleio projects on the fly:
-  * NVM with node 6 and node 8
+  * [n](https://github.com/tj/n) with node 6 and node 8
    * build-essential
    * g++
    * python

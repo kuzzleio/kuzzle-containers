@@ -23,12 +23,8 @@ RUN set -x \
       git \
       libfontconfig \
       python \
-      rbenv \
       wget \
       nodejs \
-  && gem install \
-    sass --version 3.2.10 \
-  \
   && npm install -g n \
   \
   && n $NODE_8_VERSION \

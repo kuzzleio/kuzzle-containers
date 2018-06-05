@@ -23,10 +23,7 @@ RUN  set -x \
        git \
        python \
        libfontconfig \
-       rbenv \
        wget \
-  && gem install \
-     sass --version 3.2.10 \
   && tar xf /tmp/node-v$NODE_VERSION-linux-x64.tar.gz -C /opt/ \
   && rm /tmp/node-v$NODE_VERSION-linux-x64.tar.gz \
   && mkdir -p /var/app \
