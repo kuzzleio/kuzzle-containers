@@ -1,9 +1,11 @@
-# kuzzleio/dev8
+# kuzzleio/core-dev
 
-This repository contains Dockerfile for building [Kuzzle](https://github.com/kuzzleio/kuzzle) stack development image with NodeJS 8.
+*~ 720 MB.*  
+This image is useful for core developer. Kuzzle source code is mounted inside the container allowing pm2 to reload Kuzzle when the code change.
 
 Contains:
  * all needed to watch and build kuzzleio projects on the fly:
+ * NVM with node 6 and node 8
   * build-essential
   * g++
   * python
