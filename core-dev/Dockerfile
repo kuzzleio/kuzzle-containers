@@ -38,3 +38,5 @@ RUN set -x \
   && rm -rf /var/lib/apt/lists/* \
   && echo "alias ll=\"ls -lahF --color\"" >> ~/.bashrc \
   && chmod +x ~/.bashrc
+
+RUN n $NODE_8_VERSION
