@@ -1,4 +1,4 @@
-FROM debian:stretch-slim as development
+FROM debian:stretch-slim as plugin-dev
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Develop new plugin or protocol for Kuzzle with ease"

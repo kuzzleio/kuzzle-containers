@@ -1,7 +1,7 @@
-# kuzzleio/development
+# kuzzleio/plugin-dev
 
 *~ 780 MB.*  
-The development image is useful for plugin or protocol developer.
+The plugin-dev image is useful for plugin or protocol developer.
 
 Contains:
  * all needed to watch and build kuzzleio projects on the fly:

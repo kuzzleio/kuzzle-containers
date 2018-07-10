@@ -1,4 +1,4 @@
-FROM kuzzleio/development as development
+FROM kuzzleio/plugin-dev as plugin-dev
 
 FROM debian:stretch-slim as production
 
@@ -9,8 +9,8 @@ ENV NODE_VERSION=8.9.0
 ENV NODE_ENV=production
 ENV PATH=/opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
 
-COPY --from=development /var/app /var/app
-COPY --from=development /opt/node-v$NODE_VERSION-linux-x64 /opt/node-v$NODE_VERSION-linux-x64
+COPY --from=plugin-dev /var/app /var/app
+COPY --from=plugin-dev /opt/node-v$NODE_VERSION-linux-x64 /opt/node-v$NODE_VERSION-linux-x64
 
 RUN  ln -s /var/app/docker-compose/scripts/run.sh /usr/local/bin/kuzzle \
   && chmod a+x /usr/local/bin/kuzzle \
