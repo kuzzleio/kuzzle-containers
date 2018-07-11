@@ -51,7 +51,7 @@ The plugin-dev image is useful for plugin or protocol developer.
    * curl
    * wget
 
-## kuzzleio/production
+## kuzzleio/kuzzle
 
 *~ 250 MB.*  
-The production image contain only Kuzzle source code and compiled npm packages.  
+The Kuzzle production image contain only Kuzzle source code and compiled npm packages.  

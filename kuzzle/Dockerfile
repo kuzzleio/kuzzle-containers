@@ -1,6 +1,8 @@
-FROM kuzzleio/plugin-dev as plugin-dev
+ARG current_tag=latest
 
-FROM debian:stretch-slim as production
+FROM kuzzleio/plugin-dev:$current_tag as plugin-dev
+
+FROM debian:stretch-slim as kuzzle
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Run your Kuzzle backend in production mode"
@@ -15,6 +17,8 @@ COPY --from=plugin-dev /opt/node-v$NODE_VERSION-linux-x64 /opt/node-v$NODE_VERSI
 RUN  ln -s /var/app/docker-compose/scripts/run.sh /usr/local/bin/kuzzle \
   && chmod a+x /usr/local/bin/kuzzle \
   && chmod a+x /var/app/docker-compose/scripts/docker-entrypoint.sh
+
+WORKDIR /var/app
 
 ENTRYPOINT ["/var/app/docker-compose/scripts/docker-entrypoint.sh"]
 
