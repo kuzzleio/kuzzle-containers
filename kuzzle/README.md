@@ -7,5 +7,5 @@ The Kuzzle production image contain only Kuzzle source code and compiled npm pac
 
 Theses images are build using multi-stage Dockerfile.
 
-The first stage (`plugin-dev`) is the development image which install packages, grab the source code and build npm packages.  
-The second stage (`kuzzle`) only copy the application directory and nodejs binaries inside the container.  
+The first stage (`plugin-dev`) is the development image which installs packages, grabs the source code and builds npm packages.  
+The second stage (`kuzzle`) only copies the application directory and nodejs binaries inside the container.  
