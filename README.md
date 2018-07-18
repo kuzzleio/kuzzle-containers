@@ -4,7 +4,7 @@ This repository contains mutualized containers for running [Kuzzle](https://gith
 
 It contains :
  * [kuzzleio/core-dev](https://hub.docker.com/r/kuzzleio/core-dev/) image: used by core developer to develop on the Kuzzle core
- * [kuzzleio/development](https://hub.docker.com/r/kuzzleio/development/) image: used by plugin or protocol developer
+ * [kuzzleio/plugin-dev](https://hub.docker.com/r/kuzzleio/plugin-dev/) image: used by plugin or protocol developer
  * [kuzzleio/production](https://hub.docker.com/r/kuzzleio/production/) image: used to deploy Kuzzle in production
 
 ## kuzzleio/core-dev
@@ -29,10 +29,10 @@ Contains:
   * curl
   * wget
 
-## kuzzleio/development
+## kuzzleio/plugin-dev
 
 *~ 780 MB.*  
-The development image is useful for plugin or protocol developer.
+The plugin-dev image is useful for plugin or protocol developer.
 
  Contains:
   * all needed to watch and build kuzzleio projects on the fly:
@@ -51,7 +51,7 @@ The development image is useful for plugin or protocol developer.
    * curl
    * wget
 
-## kuzzleio/production
+## kuzzleio/kuzzle
 
 *~ 250 MB.*  
-The production image contain only Kuzzle source code and compiled npm packages.  
+The Kuzzle production image contains only Kuzzle source code and compiled npm packages.  

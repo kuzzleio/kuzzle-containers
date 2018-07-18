@@ -1,7 +1,7 @@
-# kuzzleio/development
+# kuzzleio/plugin-dev
 
 *~ 780 MB.*  
-The development image is useful for plugin or protocol developer.
+The plugin-dev image is useful for plugin or protocol developer.
 
 Contains:
  * all needed to watch and build kuzzleio projects on the fly:
@@ -24,5 +24,5 @@ Contains:
 
 Theses images are build using multi-stage Dockerfile.
 
-The first stage (`development`) is the development image which install packages, grab the source code and build npm packages.  
-The second stage (`production`) only copy the application directory and nodejs binaries inside the container.  
+The first stage (`plugin-dev`) is the development image which installs packages, grabs the source code and builds npm packages.  
+The second stage (`kuzzle`) only copies the application directory and nodejs binaries inside the container.  
