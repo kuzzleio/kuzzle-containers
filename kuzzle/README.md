@@ -1,7 +1,7 @@
 # kuzzleio/kuzzle
 
 *~ 250 MB.*  
-The Kuzzle production image contain only Kuzzle source code and compiled npm packages.  
+The Kuzzle production image contains only Kuzzle source code and compiled npm packages.  
 
 ### Multi stage
 
