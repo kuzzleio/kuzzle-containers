@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:5.5.3
+FROM docker.elastic.co/elasticsearch/elasticsearch:5.0.2
 MAINTAINER kuzzle <support@kuzzle.io>
 
 COPY jvm.options /usr/share/elasticsearch/config/jvm.options
