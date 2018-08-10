@@ -2,7 +2,7 @@
 
 set -e
 
-for image in development production core-dev; do
+for image in core-dev; do
     echo ""
     echo ""
     echo ""

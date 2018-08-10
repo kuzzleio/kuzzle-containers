@@ -6,7 +6,7 @@ LABEL description="Enhance the Kuzzle core with ease"
 WORKDIR /var/app
 ENV TERM=xterm
 ENV NODE_6_VERSION=6.13.1
-ENV NODE_8_VERSION=8.9.0
+ENV NODE_8_VERSION=8.11.3
 
 RUN  apt-get update && apt-get install -y \
         curl \
