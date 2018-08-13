@@ -5,6 +5,12 @@ This repository contains mutualized containers for running [Kuzzle](https://gith
 It contains :
  * [kuzzleio/core-dev](https://hub.docker.com/r/kuzzleio/core-dev/) image: used by core developer to develop on the Kuzzle core
 
+## Prerequisites
+
+ARM based rootfs are tracked using [git LFS storate](https://git-lfs.github.com/).
+
+Make sure to install git lfs and enable it for the repository.
+
 ## kuzzleio/core-dev
 
 *~ 720 MB.*  
