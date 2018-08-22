@@ -7,7 +7,7 @@ It contains :
 
 ## Prerequisites
 
-ARM based rootfs are tracked using [git LFS storate](https://git-lfs.github.com/).
+ARM based rootfs are tracked using [git LFS storage](https://git-lfs.github.com/).
 
 Make sure to install git lfs and enable it for the repository.
 
