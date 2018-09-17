@@ -1,4 +1,4 @@
-FROM kuzzleio/aarch64:latest
+FROM multiarch/debian-debootstrap:arm64-stretch-slim
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
