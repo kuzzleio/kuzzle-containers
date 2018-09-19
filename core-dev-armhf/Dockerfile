@@ -1,4 +1,4 @@
-FROM kuzzleio/armhf:latest
+FROM multiarch/debian-debootstrap:armhf-stretch-slim
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
@@ -11,7 +11,7 @@ WORKDIR /var/app
 
 # node js - taken from official dockerfile
 RUN set -x \
-  \ 
+  \
   && apt-get update \
   && apt-get install -y --no-install-recommends \
     build-essential \
@@ -49,4 +49,3 @@ RUN set -x \
   && nvm use $NODE_8_VERSION \
   && npm install -g --unsafe-perm \
     pm2
-   
