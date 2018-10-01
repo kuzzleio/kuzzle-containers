@@ -1,4 +1,4 @@
-FROM multiarch/debian-debootstrap:armhf-stretch-slim
+FROM resin/armv7hf-debian
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
@@ -8,6 +8,8 @@ ENV NODE_8_VERSION 8.11.3
 ENV NODE_ENV=production
 
 WORKDIR /var/app
+
+RUN [ "cross-build-start" ]
 
 # node js - taken from official dockerfile
 RUN set -x \
@@ -49,3 +51,7 @@ RUN set -x \
   && nvm use $NODE_8_VERSION \
   && npm install -g --unsafe-perm \
     pm2
+
+RUN [ "cross-build-end" ]
+
+CMD [ "/bin/bash" ]
