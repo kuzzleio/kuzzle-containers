@@ -1,4 +1,4 @@
-FROM resin/aarch64-debian
+FROM resin/aarch64-debian:stretch
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
@@ -13,7 +13,7 @@ RUN [ "cross-build-start" ]
 
 # node js - taken from official dockerfile
 RUN set -x \
-  \ 
+  \
   && apt-get update \
   && apt-get install -y --no-install-recommends \
     build-essential \
