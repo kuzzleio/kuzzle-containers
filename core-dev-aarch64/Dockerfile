@@ -20,6 +20,7 @@ RUN set -x \
     ca-certificates \
     curl \
     git \
+    libzmq3-dev \
     python \
     xz-utils \
   \
