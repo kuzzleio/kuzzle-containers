@@ -22,6 +22,7 @@ RUN set -x \
       gdb \
       git \
       libfontconfig \
+      libzmq3-dev \
       python \
       wget \
       nodejs \
