@@ -5,6 +5,7 @@ LABEL description="Core development stack"
 
 ENV NODE_6_VERSION 6.13.1
 ENV NODE_8_VERSION 8.11.3
+ENV NODE_10_VERSION=10.15.0
 ENV NODE_ENV=production
 
 WORKDIR /var/app
