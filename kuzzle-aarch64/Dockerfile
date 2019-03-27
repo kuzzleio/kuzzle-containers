@@ -40,10 +40,10 @@ RUN set -x \
   \
   \
   && git clone -b ${current_tag} --recursive https://github.com/kuzzleio/kuzzle.git . \
-  && npm install --unsafe-perm \
+  && npm ci --unsafe-perm \
   && for plugin in plugins/enabled/*/; do \
       cd $plugin; \
-      npm install --unsafe-perm; \  
+      npm ci --unsafe-perm; \
      done
   \
   && apt-get remove \
