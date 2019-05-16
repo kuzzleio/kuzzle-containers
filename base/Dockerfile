@@ -2,7 +2,7 @@ FROM debian:stretch-slim
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 
-ENV NODE_VERSION=6.13.1
+ENV NODE_VERSION=6.17.1
 ENV PATH=/opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
 
 ADD https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz /tmp/
