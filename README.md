@@ -22,6 +22,7 @@ Contains:
   * build-essential
   * g++
   * python
+  * procps
   * rbenv
   * libfontconfig
   * [gem] sass

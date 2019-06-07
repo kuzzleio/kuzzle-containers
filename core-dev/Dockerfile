@@ -25,6 +25,7 @@ RUN set -x \
       libfontconfig \
       libzmq3-dev \
       python \
+      procps \
       wget \
       nodejs \
   && npm install -g n \

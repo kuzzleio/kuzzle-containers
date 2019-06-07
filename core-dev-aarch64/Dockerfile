@@ -22,6 +22,7 @@ RUN set -x \
     curl \
     git \
     libzmq3-dev \
+    procps \
     python \
     xz-utils \
   \
