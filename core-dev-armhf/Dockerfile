@@ -37,12 +37,12 @@ RUN set -x \
     i386) ARCH='x86';; \
     *) echo "unsupported architecture"; exit 1 ;; \
   esac \
-  && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_8_VERSION/node-v$NODE_8_VERSION-linux-$ARCH.tar.xz" \
-  && tar -xJf "node-v$NODE_8_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
-  && rm "node-v$NODE_8_VERSION-linux-$ARCH.tar.xz" \
+  && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_10_VERSION/node-v$NODE_10_VERSION-linux-$ARCH.tar.xz" \
+  && tar -xJf "node-v$NODE_10_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
+  && rm "node-v$NODE_10_VERSION-linux-$ARCH.tar.xz" \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
   \
-  && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash \
+  && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash \
   && export NVM_DIR="$HOME/.nvm" \
   && . "$NVM_DIR/nvm.sh" \
   \
