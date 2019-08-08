@@ -3,8 +3,6 @@ FROM resin/aarch64-debian:stretch
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
 
-ENV NODE_6_VERSION 6.13.1
-ENV NODE_8_VERSION 8.11.3
 ENV NODE_10_VERSION=10.16.0
 ENV NODE_ENV=production
 
@@ -46,19 +44,11 @@ RUN set -x \
   && export NVM_DIR="$HOME/.nvm" \
   && . "$NVM_DIR/nvm.sh" \
   \
-  && nvm install $NODE_6_VERSION  \
-  && nvm use $NODE_6_VERSION \
-  && npm install -g --unsafe-perm pm2 \
-  \
-  && nvm install $NODE_8_VERSION \
-  && nvm use $NODE_8_VERSION \
-  && npm install -g --unsafe-perm pm2 \
-  \
   && nvm install $NODE_10_VERSION \
   && nvm use $NODE_10_VERSION \
   && npm install -g --unsafe-perm pm2 \
   \
-  && nvm use $NODE_8_VERSION
+  && nvm use $NODE_10_VERSION
 
 
 RUN [ "cross-build-end" ]
