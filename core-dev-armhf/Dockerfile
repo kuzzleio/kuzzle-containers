@@ -3,7 +3,7 @@ FROM resin/armv7hf-debian:stretch
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
 
-ENV NODE_10_VERSION=10.16.0
+ENV NODE_12_VERSION=12.13.0
 ENV NODE_ENV=production
 
 WORKDIR /var/app
@@ -35,20 +35,20 @@ RUN set -x \
     i386) ARCH='x86';; \
     *) echo "unsupported architecture"; exit 1 ;; \
   esac \
-  && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_10_VERSION/node-v$NODE_10_VERSION-linux-$ARCH.tar.xz" \
-  && tar -xJf "node-v$NODE_10_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
-  && rm "node-v$NODE_10_VERSION-linux-$ARCH.tar.xz" \
+  && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_12_VERSION/node-v$NODE_12_VERSION-linux-$ARCH.tar.xz" \
+  && tar -xJf "node-v$NODE_12_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
+  && rm "node-v$NODE_12_VERSION-linux-$ARCH.tar.xz" \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
   \
   && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash \
   && export NVM_DIR="$HOME/.nvm" \
   && . "$NVM_DIR/nvm.sh" \
   \
-  && nvm install $NODE_10_VERSION \
-  && nvm use $NODE_10_VERSION  \
+  && nvm install $NODE_12_VERSION \
+  && nvm use $NODE_12_VERSION  \
   && npm install -g --unsafe-perm pm2 \
   \
-  && nvm use $NODE_10_VERSION
+  && nvm use $NODE_12_VERSION
 
 RUN [ "cross-build-end" ]
 
