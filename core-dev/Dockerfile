@@ -5,9 +5,7 @@ LABEL description="Enhance the Kuzzle core with ease"
 
 WORKDIR /var/app
 ENV TERM=xterm
-ENV NODE_6_VERSION=6.17.1
-ENV NODE_8_VERSION=8.11.3
-ENV NODE_10_VERSION=10.16.0
+ENV NODE_12_VERSION=12.13.0
 
 RUN set -x \
  \
@@ -25,18 +23,12 @@ RUN set -x \
       python \
       procps \
       wget \
-  && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+  && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
   && apt-get install -y nodejs \
   \
   && npm install -g n \
   \
-  && n $NODE_6_VERSION \
-  && npm install -g pm2 \
-  \
-  && n $NODE_8_VERSION \
-  && npm install -g pm2 \
-  \
-  && n $NODE_10_VERSION \
+  && n $NODE_12_VERSION \
   && npm install -g pm2 \
   \
   && apt-get clean \
@@ -44,4 +36,4 @@ RUN set -x \
   && echo "alias ll=\"ls -lahF --color\"" >> ~/.bashrc \
   && chmod +x ~/.bashrc \
   \
-  && n $NODE_8_VERSION
+  && n $NODE_12_VERSION
