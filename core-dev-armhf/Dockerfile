@@ -3,7 +3,7 @@ FROM resin/armv7hf-debian:stretch
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
 
-ENV NODE_12_VERSION=12.15.0
+ENV NODE_12_VERSION=12.16.0
 ENV NODE_ENV=production
 
 WORKDIR /var/app
