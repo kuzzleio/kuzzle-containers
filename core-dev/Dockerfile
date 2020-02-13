@@ -5,7 +5,7 @@ LABEL description="Enhance the Kuzzle core with ease"
 
 WORKDIR /var/app
 ENV TERM=xterm
-ENV NODE_12_VERSION=12.13.0
+ENV NODE_12_VERSION=12.16.0
 
 RUN set -x \
  \
