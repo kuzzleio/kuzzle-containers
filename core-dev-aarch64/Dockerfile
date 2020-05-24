@@ -46,7 +46,7 @@ RUN set -x \
   \
   && nvm install $NODE_12_VERSION \
   && nvm use $NODE_12_VERSION \
-  && npm install -g --unsafe-perm pm2 \
+  && npm install -g --unsafe-perm nodemon \
   \
   && nvm use $NODE_12_VERSION
 
