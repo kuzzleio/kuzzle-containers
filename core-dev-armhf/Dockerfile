@@ -3,7 +3,7 @@ FROM resin/armv7hf-debian:stretch
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
 
-ENV NODE_12_VERSION=12.16.0
+ENV NODE_12_VERSION=12.16.3
 ENV NODE_ENV=production
 
 WORKDIR /var/app
@@ -46,7 +46,7 @@ RUN set -x \
   \
   && nvm install $NODE_12_VERSION \
   && nvm use $NODE_12_VERSION  \
-  && npm install -g --unsafe-perm pm2 \
+  && npm install -g --unsafe-perm nodemon \
   \
   && nvm use $NODE_12_VERSION
 
