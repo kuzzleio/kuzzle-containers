@@ -5,7 +5,8 @@ LABEL description="Enhance the Kuzzle core with ease"
 
 WORKDIR /var/app
 ENV TERM=xterm
-ENV NODE_12_VERSION=12.16.3
+ENV NODE_12_16_3=12.16.3
+ENV NODE_12_VERSION=12.18.1
 
 RUN set -x \
  \
@@ -28,8 +29,9 @@ RUN set -x \
   \
   && npm install -g n \
   \
+  && n $NODE_12_16_3 \
   && n $NODE_12_VERSION \
-  && npm install -g nodemon \
+  && npm install -g nodemon kourou \
   \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
