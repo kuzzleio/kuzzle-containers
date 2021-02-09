@@ -6,7 +6,8 @@ LABEL description="Enhance the Kuzzle core with ease"
 WORKDIR /var/app
 ENV TERM=xterm
 ENV NODE_12_16_3=12.16.3
-ENV NODE_12_VERSION=12.18.1
+ENV NODE_12_18_1=12.18.1
+ENV NODE_14_VERSION=14.15.4
 
 RUN set -x \
  \
@@ -24,13 +25,14 @@ RUN set -x \
       python \
       procps \
       wget \
-  && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+  && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
   && apt-get install -y nodejs \
   \
   && npm install -g n \
   \
   && n $NODE_12_16_3 \
-  && n $NODE_12_VERSION \
+  && n $NODE_12_18_1 \
+  && n $NODE_14_VERSION \
   && npm install -g nodemon kourou \
   \
   && apt-get clean \
@@ -38,4 +40,4 @@ RUN set -x \
   && echo "alias ll=\"ls -lahF --color\"" >> ~/.bashrc \
   && chmod +x ~/.bashrc \
   \
-  && n $NODE_12_VERSION
+  && n $NODE_14_VERSION
