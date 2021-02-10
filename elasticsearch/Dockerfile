@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:7.4.2
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.10.2
 
 MAINTAINER kuzzle <support@kuzzle.io>
 
