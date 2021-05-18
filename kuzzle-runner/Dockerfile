@@ -1,4 +1,4 @@
-FROM node:14.15.4-stretch-slim
+FROM node:14.17.0-stretch-slim
 
 RUN  set -x \
   && apt-get update && apt-get install -y \
