@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Enhance the Kuzzle core with ease"
@@ -15,6 +15,7 @@ RUN set -x \
  && apt-get install -y \
       bash-completion \
       build-essential \
+      software-properties-common \
       curl \
       g++ \
       gdb \

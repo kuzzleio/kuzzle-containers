@@ -1,4 +1,4 @@
-FROM resin/armv7hf-debian:stretch
+FROM resin/armv7hf-debian:buster
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"

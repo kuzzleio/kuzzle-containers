@@ -1,4 +1,4 @@
-FROM resin/aarch64-debian:stretch
+FROM resin/aarch64-debian:buster
 
 LABEL io.kuzzle.vendor="Kuzzle <support@kuzzle.io>"
 LABEL description="Core development stack"
